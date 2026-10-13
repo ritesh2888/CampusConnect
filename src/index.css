@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply m-0 p-0 font-sans bg-slate-50 text-slate-900 antialiased selection:bg-indigo-500/20 selection:text-indigo-900 transition-colors duration-300;
+  }
+  
+  /* =========================================
+     ELEGANT & SUBTLE DARK MODE OVERRIDES
+     ========================================= */
+  html.dark body {
+    @apply bg-[#08090c] text-slate-300 selection:bg-indigo-500/30 selection:text-white;
+  }
+  
+  /* Cards & Containers */
+  html.dark .bg-white {
+    @apply bg-[#111318] shadow-[0_4px_20px_-2px_rgba(0,0,0,0.5)] !important;
+  }
+  html.dark .bg-slate-50, 
+  html.dark .bg-slate-50\/50 {
+    @apply bg-[#08090c] !important;
+  }
+  
+  /* Modals and Overlays */
+  html.dark .bg-white\/80,
+  html.dark .bg-white\/90 {
+    @apply bg-[#111318]/80 !important;
+  }
+  
+  /* Text Contrasts */
+  html.dark .text-slate-900 {
+    @apply text-white !important;
+  }
+  html.dark .text-slate-700 {
+    @apply text-slate-200 !important;
+  }
+  html.dark .text-slate-600 {
+    @apply text-slate-300 !important;
+  }
+  html.dark .text-slate-500 {
+    @apply text-slate-400 !important;
+  }
+  
+  /* Subtle Borders */
+  html.dark .border-slate-200, 
+  html.dark .border-slate-200\/80, 
+  html.dark .border-slate-100 {
+    @apply border-white/[0.06] !important;
+  }
+  
+  /* Inner Pills / Badges */
+  html.dark .bg-slate-100 {
+    @apply bg-white/[0.03] border border-white/[0.08] text-slate-300 !important;
+  }
+  
+  /* Input Fields */
+  html.dark input, 
+  html.dark textarea, 
+  html.dark select {
+    @apply bg-[#08090c] border-white/[0.08] text-white placeholder-slate-500 focus:bg-[#111318] focus:border-indigo-500/50 focus:ring-indigo-500/20 !important;
+  }
+
+  /* Pastel Badges mapping to luminous dark variants */
+  html.dark .bg-indigo-50 { @apply bg-indigo-500/10 border-indigo-500/20 text-indigo-400 !important; }
+  html.dark .bg-emerald-50 { @apply bg-emerald-500/10 border-emerald-500/20 text-emerald-400 !important; }
+  html.dark .bg-amber-50 { @apply bg-amber-500/10 border-amber-500/20 text-amber-400 !important; }
+  html.dark .bg-rose-50 { @apply bg-rose-500/10 border-rose-500/20 text-rose-400 !important; }
+  
+  html.dark .text-indigo-700 { @apply text-indigo-400 !important; }
+  html.dark .text-emerald-700 { @apply text-emerald-400 !important; }
+  html.dark .text-amber-700 { @apply text-amber-400 !important; }
+  html.dark .text-rose-600, html.dark .text-rose-700 { @apply text-rose-400 !important; }
+  
+  /* Hero Banner Gradient override for dark mode */
+  html.dark .from-indigo-100\/70 { @apply from-indigo-900/20 !important; }
+  html.dark .via-slate-50 { @apply via-[#08090c] !important; }
+  html.dark .to-slate-50 { @apply to-[#08090c] !important; }
+  html.dark .border-indigo-100 { @apply border-white/10 !important; }
+}
